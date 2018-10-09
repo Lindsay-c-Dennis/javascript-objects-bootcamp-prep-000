@@ -1,7 +1,6 @@
 var playlist = new Object ({Bonerama: "When the Levee Breaks"});
 function updatePlaylist(playlist, artistName, songTitle) {
-  playlist[artistName] = songTitle;
-  return playlist
+  return Object.assign({}, playlist, {[artistName]: songTitle })
 }
 function removeFromPlaylist(playlist,artistName) {
   delete playlist[artistName];
